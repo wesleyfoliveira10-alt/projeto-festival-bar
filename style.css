@@ -1,0 +1,468 @@
+/* ============================================================== IMPORTAÇÃO DE FONTES ============================================================= */
+@font-face {
+  font-family: "cyberpunk";
+  src: url("fonts/cyberpunkCityFont.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "hypik";
+  src: url("fonts/hypik.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "sonic";
+  src: url("fonts/SonicTurbo.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "storm";
+  src: url("fonts/Stormlight.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "brush";
+  src: url("fonts/RocketBrush.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "glith";
+  src: url("fonts/PinkBlue.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "glitch";
+  src: url("fonts/Future Glitch.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "cyber";
+  src: url("fonts/Cyber.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "brushKing";
+  src: url("fonts/brushKing.otf") format("opentype");
+}
+
+/* ===================================================================== GERAL ======================================================================== */
+body {
+  margin: 0;
+  text-align: center;
+  background-color: #000000;
+  color: #147780;
+  font-family: "rajdhani", "Courier New", Courier, monospace;
+  font-size: 20px;
+}
+
+
+h1 {
+  color: #f222bb;
+  font-family: "cyber";
+}
+
+h2 {
+  color: #04d9d9;
+  font-family: "glitch";
+  font-size: 70px;
+  text-transform: uppercase;
+  margin-top: 90px;
+  text-shadow: 0 0 20px rgba(4, 217, 217, 0.8);
+  border-bottom: 3px solid #F222BB;
+  display: inline-block;
+  padding-bottom: 10px;
+  border-radius: 10px;
+
+}
+
+h3 {
+  color: #f222bb;
+  font-family: "BrushKing";
+  font-size: 35px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px rgba(242, 34, 187, 0.7);
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+
+.bloco-dia {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: fit-content;
+    margin: 0 auto 60px auto;
+}
+
+h4 {
+    color: #000000;
+    background-color: #04d9d9;
+    font-family: 'rajdhani';
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    width: fit-content;
+    padding: 5px 30px;
+    transform:skewX(-15deg);
+    box-shadow: 0 0 50px rgba(4, 217, 217, 0.6);
+    margin: 0px 0 40px 0;
+
+}
+
+h5 {
+    font-family: 'glitch';
+    color: #f222bb;
+    font-size: 45px;
+    text-shadow: 0 0 10px rgba(4, 217, 217, 0.6);
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1ed9d9;
+    border-radius: 5px;
+
+}
+
+p {
+  color: #147780;
+  line-height: 1.5;
+}
+
+/* ================================================================================ FORMULÁRIO ================================================================== */
+.aba {
+  font-family: "cyber";
+  font-size: 30px;
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100vh;
+  background-color: #000000;
+  border-left: 2px solid #1ed9d9;
+  box-shadow: -5px 0 15px rgba(4, 217, 217, 0.3);
+  padding: 20px;
+  z-index: 1000;
+  transition: right 0.3s ease;
+}
+.aba.ativa {
+  right: 0;
+}
+#botaoFecharAba {
+  background-color: transparent;
+  color: #1ed9d9;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  
+}
+
+form {
+  display: grid;
+  gap: 10px;
+  color: #1ed9d9;
+  text-shadow: 0 0 10px rgba(242, 34, 187, 0.6);
+  text-align: center;
+  max-width: 400px;
+  margin: 40px auto;
+  font-size: 28px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea  {
+  background-color: #730260;
+  border: 1px solid #1ed9d9;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+#data {
+  color: #fff;
+  text-align: center;
+}
+
+ ::placeholder {
+    color: #fff;
+    text-align: center;
+  }
+
+button[type="submit"] {
+  background-color: #730260;
+  color: #1ed9d9;
+  border: 0.5px solid #1ed9d9;
+  padding: 10px 20px;
+  font-family: "cyber";
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 30px;
+}
+button[type="submit"]:hover {
+  background-color: #1ed9d9;
+  color: #730260;
+  border-color: #f222bb;
+  text-shadow: 0 0 20px rgba(242, 34, 187, 0.6);
+  transition: 0.3s;
+}
+
+/* =============================================== LISTAS =========================================================== */
+
+.listas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 40px auto;
+}
+
+ul {
+  list-style-position: inside; /* Mantém as bolinhas da lista alinhadas no centro */
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  display: list-item;
+  border: 0.5px solid #f222bb;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow:
+    10px 1px 10px 0px rgba(242, 34, 187, 0.3),
+    -10px 0px 10px 0px rgba(242, 34, 187, 0.3);
+}
+
+li:hover {
+  background-color: rgba(242, 34, 187, 0.15);
+  transition: 0.3s;
+  cursor: crosshair;
+}
+
+
+
+/* =============================================== CABEÇALHO =========================================================== */
+
+
+header h1 {
+  color: #f222bb;
+  margin-bottom: 0;
+  font-family: "glitch";
+  font-size: 140px;
+  text-shadow: 0 0 30px rgba(4, 217, 217, 0.4);
+  border-bottom: 3px solid #04d9d9;
+  display: inline-block;
+  border-radius: 10px;
+  
+}
+
+header h3 {
+  color: #04d9d9;
+  font-family: "brushKing";
+  font-size: 24px;
+  margin-top: 0px;
+  text-shadow: 0 0 10px rgba(242, 34, 187, 0.6);
+  border-bottom: 0.1px solid #f222bb;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+
+/* ================================================================================ NAV ================================================================== */
+
+
+nav {
+  background-color: #730260;
+  padding: 20px 0;
+  margin: 0;
+  border-bottom: 3px solid #04d9d9;
+}
+
+nav a {
+  font-family: "cyber";
+  color: #1ed9d9;
+  text-decoration: none;
+  font-size: 60px;
+  display: inline-block;
+  margin: 0 30px;
+  transition: 0.5s;
+}
+
+nav a:hover {
+  color: #2becec;
+  text-shadow: 0 0 20px #f222bb;
+  transition: 0.8s;
+}
+
+u {
+  text-shadow: 0 0 3px #1ed9d9;
+  text-decoration: none;
+}
+
+
+/* ================================================================================ BANNER ========================================================== */
+
+
+.banner {
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+  display: block;
+  border-bottom: 3px solid #04d9d9;
+  box-shadow: 0px 0px 30px rgba(4, 217, 217, 0.4);
+}
+
+
+/* ================================================================================ TABELA DE INGRESSOS ================================================================== */
+
+
+.tabela-ingressos {
+  margin: 40px auto;
+  border-collapse: collapse; /* Junta as bordas para não ficar com espaço duplo */
+  width: 80%;
+  max-width: 800px;
+  font-size: 18px;
+  color: #04d9d9;
+  background-color: rgba(26, 26, 26, 0.6);
+  box-shadow:
+    10px 0 20px rgba(242, 34, 187, 0.3),
+    -10px 0 20px rgba(242, 34, 187, 0.3);
+}
+
+.tabela-ingressos th,
+.tabela-ingressos td {
+  border: 1px solid #f222bb;
+  padding: 15px;
+  text-align: center;
+}
+
+.tabela-ingressos th {
+  background-color: #730260;
+  color: #1ed9d9;
+  font-size: 32px;
+  font-family: "cyber";
+  letter-spacing: 2px;
+}
+
+.tabela-ingressos tbody tr:hover {
+  background-color: rgba(242, 34, 187, 0.15);
+  transition: 0.3s;
+  cursor: url(..\atividadePratica\cursor\mirapointer.cur), 16 16 crosshair;
+}
+
+/* ================================================================================ LOCAL DO EVENTO ================================================================== */
+.fotos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.fotos img {
+  width: 90%;
+  height: 250px;
+  border: 2px solid #f222bb;
+  border-radius: 8px;
+  box-shadow:
+    5px 0 15px rgba(242, 34, 187, 0.3),
+    -5px 0 15px rgba(242, 34, 187, 0.3);
+}
+
+.fotos img:hover {
+  transform: scale(1.1);
+  filter:contrast(120%);
+  filter: brightness(1.2);
+  transition: 0.4s;
+  cursor: url(..\atividadePratica\cursor\mirapointer.cur), 16 16 crosshair;
+}
+  
+
+/* ================================================================================ CARDS DOS ARTISTAS ================================================================== */
+
+
+.artistas-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Se a tela for pequena, joga o segundo card para baixo */
+  gap: 50px; /* Espaço entre os cards */
+  padding: 40px 20px;
+}
+
+.artista-card {
+  background-color: #1a1a1a;
+  border: 2px solid #04d9d9;
+  border-radius: 8px;
+  width: 300px;
+  overflow: hidden; /* Impede que a foto vaze para fora da borda arredondada */
+  box-shadow:
+    5px 0 15px rgba(4, 217, 217, 0.2),
+    -5px 0 15px rgba(4, 217, 217, 0.2);
+  transition: 0.4s;
+}
+.artista-card:hover {
+  border-color: #f222bb;
+  box-shadow: 0 0 30px (rgba(242, 34, 187, 0.6));
+  transform: translateY(-10px);
+}
+.artista-card:hover .foto-artista {
+  perspective:(600px);
+  transition: 3s;
+}
+.artista-card:hover .foto-artista {
+  transform:  rotateY(180deg);
+}
+
+.foto-artista {
+  width: 100%;
+  height: 400px;
+  object-fit: cover; /* Corta a imagem para caber no quadrado sem distorcer */
+  border-bottom: 2px solid #f222bb; /* Linha rosa separando a foto do texto */
+  filter: grayscale(100%) contrast(120%);
+  transition: 0.4s;
+}
+
+.artista-card:hover .foto-artista {
+  filter: grayscale(0%) contrast(100%);
+}
+
+.info-artista h2,
+.info-artista h3 {
+    font-family: "cyber";
+    font-size: 30px;
+    margin-top: 0; 
+    border-bottom: none; 
+    text-shadow: 0 0 10px rgba(4, 217, 217, 0.6); 
+    text-transform: none;
+    letter-spacing: 2px;
+}
+
+.info-artista h3 {
+  margin-top: 0;
+}
+
+.numero {
+    font-family: 'glith';
+    font-size: 80px;
+    vertical-align: -15px;
+    
+}
+
+/* ================================================================================ FOOTER ================================================================== */
+
+footer {
+  background-color: #730260;
+  padding: 20px 0;
+  font-family: 'rajdhani';
+  font-size: 20px;
+  color: #1ed9d9;
+  text-shadow: 0 0 10px rgba(4, 217, 217, 0.4);
+  border-top: 3px solid #04d9d9;
+  
+}
+
+footer p {
+  color: #ffff;
+  text-shadow: 0 0 10px rgba(4, 217, 217, 0.4);
+  
+}
